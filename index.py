@@ -90,7 +90,5 @@ def recortar_nube():
         return jsonify({'error': str(e)}), 500
     
     
-puerto = int(os.environ.get('PUERTO', 5000))
-
 if __name__ == '__main__':
-    app.run(debug=True, port=puerto)
+    app.run(host='0.0.0.0', port=10000)
